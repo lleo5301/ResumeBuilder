@@ -48,6 +48,15 @@ router.route('/resumes')
 
           res.json({message:'Resume Created'});
       });
+
+      .get(function(req,res){
+        Resume.find(function(err,bears){
+          if(err)
+            res.send(err);
+
+            res.json(resumes);
+        })
+      })
     });
 
 
