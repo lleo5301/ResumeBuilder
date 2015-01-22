@@ -20,13 +20,38 @@ var port = process.env.PORT || 5300;
 //set routes for the api
 var router = express.Router();
 
+//routes boilerplate
+router.use(function(req,res,next){
+  console.log('Working on it');
+  //continue to remaining routes
+  next();
+});
+
 //test
 router.get('/', function(req, res){
   res.json({message:"This api works"});
 
 });
 
-//to-do add real routes
+//resume route
+router.route('/resumes')
+{
+    //create a resume
+    .post(function(req, res){
+      var resume = new Resume();
+      resume.name = req.body.name;
+
+      //save to db
+      bear.save(function(err){
+        if(err)
+          res.send(err);
+
+          res.json({message:'Resume Created'});
+      });
+    });
+}
+
+
 
 
 ///register routes
