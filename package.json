@@ -1,0 +1,21 @@
+{
+  "name": "ResumeBuilder",
+  "version": "1.0.0",
+  "description": "Resume Builder Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Resume",
+    "Node",
+    "Angular",
+    "PDF",
+    "Word"
+  ],
+  "author": "Leonardo Quintero",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.11.1"
+  }
+}
