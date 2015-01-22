@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/rb');
 
 //model
-var Resume = require('./app/models/resume.js');
+var Resume = require('./app/models/resume');
 
 //configure body parser
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -29,7 +29,8 @@ router.use(function(req,res,next){
 
 //test
 router.get('/', function(req, res){
-  res.json({message:"This api works"});
+  res.sendfile('./views/index.html');
+  //res.json({message:"This api works"});
 
 });
 
