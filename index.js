@@ -61,10 +61,6 @@ router.route('/resumes')
     });
 
 
-
-
-
-
 ///register routes
 app.use('/api', router);
 
