@@ -47,7 +47,8 @@ router.route('/resumes')
           res.send(err);
 
           res.json({message:'Resume Created'});
-      })
+      });
+    })
 
       .get(function(req,res){
         Resume.find(function(err,resumes){
@@ -56,8 +57,8 @@ router.route('/resumes')
 
             res.json(resumes);
         });
-    
     });
+  
 
 
 
