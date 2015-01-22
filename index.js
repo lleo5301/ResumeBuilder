@@ -50,7 +50,7 @@ router.route('/resumes')
       })
 
       .get(function(req,res){
-        Resume.find(function(err,bears){
+        Resume.find(function(err,resumes){
           if(err)
             res.send(err);
 
