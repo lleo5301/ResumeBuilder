@@ -42,7 +42,7 @@ router.route('/resumes')
       resume.name = req.body.name;
 
       //save to db
-      bear.save(function(err){
+      resume.save(function(err){
         if(err)
           res.send(err);
 
