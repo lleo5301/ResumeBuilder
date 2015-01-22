@@ -35,7 +35,7 @@ router.get('/', function(req, res){
 
 //resume route
 router.route('/resumes')
-{
+
     //create a resume
     .post(function(req, res){
       var resume = new Resume();
@@ -49,7 +49,7 @@ router.route('/resumes')
           res.json({message:'Resume Created'});
       });
     });
-}
+
 
 
 
