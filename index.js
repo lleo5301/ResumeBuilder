@@ -39,7 +39,7 @@ router.route('/resumes')
     //create a resume
     .post(function(req, res){
       var resume = new Resume();
-      resume.name = req.body.name;
+      resume.Name = req.body.Name;
 
       //save to db
       resume.save(function(err){
