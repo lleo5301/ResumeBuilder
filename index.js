@@ -44,7 +44,7 @@ router.route('/resumes')
       //save to db
       resume.save(function(err){
         if(err)
-          res.send(err);
+              res.send(err);
 
           res.json({message:'Resume Created'});
       });
@@ -53,12 +53,13 @@ router.route('/resumes')
       .get(function(req,res){
         Resume.find(function(err,resumes){
           if(err)
-            res.send(err);
+              console.log(err);
+              res.send(err);
 
             res.json(resumes);
         });
     });
-  
+
 
 
 
