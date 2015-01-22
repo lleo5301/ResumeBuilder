@@ -56,7 +56,7 @@ router.route('/resumes')
 
             res.json(resumes);
         });
-      })
+    
     });
 
 
