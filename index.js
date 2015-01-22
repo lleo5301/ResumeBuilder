@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/rb');
 
 //model
-var Resume = require('./app/models/bear');
+var Resume = require('./app/models/resume.js');
 
 //configure body parser
 app.use(bodyParser.urlencoded({ extended: true}));

@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var ResumeShcema = new schema({
+var ResumeSchema = new Schema({
     Name: String
 
 });
