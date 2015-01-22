@@ -53,7 +53,7 @@ router.route('/resumes')
       .get(function(req,res){
         Resume.find(function(err,resumes){
           if(err)
-              console.log(err);
+              //console.log(err);
               res.send(err);
 
             res.json(resumes);
