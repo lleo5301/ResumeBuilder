@@ -29,13 +29,13 @@ router.use(function(req,res,next){
 
 //test
 router.get('/', function(req, res){
-  res.sendfile('./views/index.html');
+  res.sendFile('./views/index.html');
   //res.json({message:"This api works"});
 
 });
 
 //resume route
-router.route('/resumes')
+router.route('/api/resumes')
 
     //create a resume
     .post(function(req, res){
@@ -63,7 +63,7 @@ router.route('/resumes')
 
 
 ///register routes
-app.use('/api', router);
+app.use('/', router);
 
 //lets start the server
 //=========================================================
