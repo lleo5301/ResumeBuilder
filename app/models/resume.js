@@ -3,8 +3,16 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+// var Skills = new Schema({
+//    List = [String]
+// });
+
 var ResumeSchema = new Schema({
-    Name: String
+    Name: String,
+    Title: String,
+    Email: String,
+    Phone: Number,
+    Skills = [String]
 
 });
 
