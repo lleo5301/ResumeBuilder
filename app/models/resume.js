@@ -12,6 +12,13 @@ var ResumeSchema = new Schema({
     Title: String,
     Email: String,
     Phone: Number,
+    Address:{
+      lineOne: String,
+      lineTwo: String,
+      state: String,
+      city: String,
+      zip: Number
+    },
     Skills: [String]
 
 });
