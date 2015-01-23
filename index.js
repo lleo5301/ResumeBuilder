@@ -41,12 +41,12 @@ router.route('/api/resumes')
     .post(function(req, res){
       console.log("Post:");
       console.log(req.body);
-      var resume = new Resume();
-      resume.Name = req.body.Name;
-      resume.Title = req.body.Title;
-      resume.Email = req.body.Email;
-      resume.Skills = req.body.Skills;
-      
+      var resume = new Resume(req.body);
+      // resume.Name = req.body.Name;
+      // resume.Title = req.body.Title;
+      // resume.Email = req.body.Email;
+      // resume.Skills = req.body.Skills;
+
 
       //save to db
       resume.save(function(err){
