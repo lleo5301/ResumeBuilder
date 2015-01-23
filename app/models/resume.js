@@ -12,7 +12,7 @@ var ResumeSchema = new Schema({
     Title: String,
     Email: String,
     Phone: Number,
-    Skills = [String]
+    Skills: [String]
 
 });
 
