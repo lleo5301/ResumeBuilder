@@ -4,12 +4,12 @@ resumify.config(['$routeProvider', '$httpProvider',function($routeProvider, $htt
 
   $routeProvider.when("/", {
     controller:"home",
-    templateUrl:'/views/index.html'
+    templateUrl:'/views/home.html'
   });
   $routeProvider.when("/new",{
-    controller:"home",
+    controller:"resume",
     templateUrl:'/views/new.html'
-  } )
+  });
 
 
 
