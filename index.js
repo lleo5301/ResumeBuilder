@@ -70,6 +70,7 @@ router.route('/api/resumes')
 
 ///register routes
 app.use('/', router);
+app.use('/libs', express.static(_dirname + '/libs'));
 
 //lets start the server
 //=========================================================
