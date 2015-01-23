@@ -1,11 +1,19 @@
 angular.module('resumify')
 
-.controller('home',['$scope', function($scope){
+.controller('home',['$scope','$http', function($scope, $http){
     $scope.resumes = function()
     {
-      alert("Home Controller is working");
+      $http.get("/api/resumes")
+      .success(function(response){
+        $scope.data = response;
+        console.log($scope.data);
+      });
     };
 
-    
+
+
+
+
+
 
 }])
