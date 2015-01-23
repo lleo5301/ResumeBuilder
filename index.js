@@ -53,7 +53,8 @@ router.route('/api/resumes')
         if(err)
               res.send(err);
 
-          res.json({message:'Resume Created'});
+          res.json(resume);
+          
       });
     })
 
