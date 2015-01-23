@@ -28,7 +28,7 @@ router.use(function(req,res,next){
 });
 
 //test
-router.get('/', function(req, res){
+router.get('/home', function(req, res){
   res.sendFile('./views/index.html');
   //res.json({message:"This api works"});
 
