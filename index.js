@@ -72,6 +72,7 @@ router.route('/api/resumes')
 app.use('/', router);
 app.use('/libs', express.static(__dirname + '/libs'));
 app.use('/app', express.static(__dirname + '/app'));
+app.use('/views', express.static(__dirname + '/views'));
 
 //lets start the server
 //=========================================================
