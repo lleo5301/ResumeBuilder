@@ -29,7 +29,7 @@ router.use(function(req,res,next){
 
 //test
 router.get('/', function(req, res){
-  res.sendFile('~/projects/ResumeBuilder/views/index.html');
+  res.sendFile('/views/index.html', {root: __dirname});
   //res.json({message:"This api works"});
   //res.send('hello world');
 });
