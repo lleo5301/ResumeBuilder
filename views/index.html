@@ -5,6 +5,7 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../app/css/style.css">
     <!-- libs-->
     <script src="../libs/jquery/jquery-2.1.3.js"></script>
     <script src="../libs/bootstrap/js/bootstrap.js"></script>
@@ -12,29 +13,23 @@
     <script src="../libs/angular/angular-route.js"></script>
     <script src="../app/core.js"></script>
     <script src="../app/controllers/home.js"></script>
+    <script src="../app/controllers/resume.js"></script>
     <!-- todo add ng app-->
-
-
-    <title>Resumify</title>
   </head>
-  <body ng-app="resumify" ng-controller="home">
+
+  <body ng-app="resumify">
     <div class="container">
-      <div class="row">
+      <div class="row header">
         <div class="col-md-6">
-          <h1>Resumify logo placeholder</h1>
-        </div>
-        <div class="col-md-5">
           <h1>Resumify</h1>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="jumbotron">
-            <h2>Start your resume</h2>
-            <p><a class="btn btn-primary btn-lg" ng-click="resumes()" role="button">Go!</a></p>
-          </div>
+        <div class="col-md-6">
+          <h2 class="text-right">Build your resume online</h2>
         </div>
       </div>
     </div>
+    <div id="main" ng-view=""></div>
+
   </body>
+
 </html>
