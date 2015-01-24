@@ -6,6 +6,9 @@ angular.module('resumify')
   $scope.resume = {};
   //empty address
   $scope.Address={};
+  $scope.skills=[];
+  $scope.experience=[];
+  $scope.resumeHtml = angular.element(document.getElementById('resume-preview'));
 
   $scope.resumes = function(){
     $http.get("/api/resumes")
@@ -15,7 +18,7 @@ angular.module('resumify')
     });
   };
 
-  $scope.skills=[];
+
 
   $scope.addSkill=function(){
     if(event.keyCode == 13 && $scope.skill){
@@ -32,6 +35,7 @@ angular.module('resumify')
       .success(function(data){
         console.log(data);
         $scope.resume=data;
+        console.log($scope.resumeHtml)
       })
       .error(function(data){
         console.log('Error:' + data);
