@@ -1,68 +1,108 @@
 <div class="container" ng-controller="resume">
    <div class="row">
      <div class="col-md-4">
-       <form id="Resume">
-         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" ng-model="resume.Name" name="name" placeholder="Enter Full Name">
-         </div>
-         <div class="form-group">
-           <label for="Title">Title</label>
-           <input type="text" class="form-control" ng-model="resume.Title" name="Title" placeholder="Enter Title">
-         </div>
-         <div class="form-group">
-           <label for="Phone">Phone</label>
-           <input type="tel" class="form-control" ng-model="resume.Phone" name="Phone" placeholder="Enter Phone #">
-         </div>
-         <div class="form-group">
-           <label for="Email">Email</label>
-           <input type="email" class="form-control" ng-model="resume.Email" name="email" placeholder="Email">
-         </div>
-         <!-- <div class="form-group">
-           <label for="Skills">Skills</label>
-           <input type="text" class="form-control" ng-model="skill" name="Skills" ng-keyup="addSkill()" placeholder="Enter Skill">
-           <div class="form-group" ng-show="skills">
-            <ul id="skills">
-              <li ng-repeat="skill in skills">{{skill}}</li>
-            </ul>
+       <div role="tabpanel">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a  data-target="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
+          <li role="presentation"><a  data-target="#psummary" aria-controls="psummary" role="tab" data-toggle="tab">Summary</a></li>
+          <li role="presentation"><a  data-target="#skills" aria-controls="skills" role="tab" data-toggle="tab">Experience</a></li>
+
+        </ul>
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="contact">
+             <form id="Resume">
+               <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" ng-model="resume.Name" name="name" placeholder="Enter Full Name">
+               </div>
+               <div class="form-group">
+                 <label for="Title">Title</label>
+                 <input type="text" class="form-control" ng-model="resume.Title" name="Title" placeholder="Enter Title">
+               </div>
+               <div class="form-group">
+                 <label for="Phone">Phone</label>
+                 <input type="tel" class="form-control" ng-model="resume.Phone" name="Phone" placeholder="Enter Phone #">
+               </div>
+               <div class="form-group">
+                 <label for="Email">Email</label>
+                 <input type="email" class="form-control" ng-model="resume.Email" name="email" placeholder="Email">
+               </div>
+               <form id="address" class="form-group">
+                 <div class="form-group">
+                   <label for="line1">Adress Line 1 </label>
+                   <input type="text" class="form-control" ng-model="Address.lineOne" name="line1">
+                 </div>
+                 <div class="form-group">
+                   <label for="line2">Adress Line 2 </label>
+                   <input type="text" class="form-control" ng-model="Address.lineTwo" name="line2">
+                 </div>
+                 <div class="form-group">
+                   <label for="State">State </label>
+                   <input type="text" class="form-control" ng-model="Address.state" name="State">
+                 </div>
+                 <div class="form-group">
+                   <label for="City">City</label>
+                   <input type="text" class="form-control" ng-model="Address.city" name="City">
+                 </div>
+                 <div class="form-group">
+                   <label for="Zip">Zip Code</label>
+                   <input type="number" class="form-control" ng-model="Address.zip" name="Zip">
+                 </div>
+               </form>
+           <!-- <div class="form-group">
+             <label for="Skills">Skills</label>
+             <input type="text" class="form-control" ng-model="skill" name="Skills" ng-keyup="addSkill()" placeholder="Enter Skill">
+             <div class="form-group" ng-show="skills">
+              <ul id="skills">
+                <li ng-repeat="skill in skills">{{skill}}</li>
+              </ul>
+             </div>
+          </div> -->
+            </form>
+          </div>
+
+          <!-- summary div -->
+          <div role="tabpanel" class="tab-pane" id="psummary">
+            <hr>
+            <h3>Professional Summary</h3>
+            <hr>
+            <form id="summary" class="form-group">
+              <textarea class="form-control" placeholder="Enter Proffessional Summary" ng-model="resume.Summary"> </textarea>
+            </form>
            </div>
-        </div> -->
-       </form>
-       <form id="address" class="form-group">
-         <h4 class="text-center">Address</h4>
-         <hr>
-          <div class="form-group">
-            <label for="line1">Adress Line 1 </label>
-            <input type="text" class="form-control" ng-model="Address.lineOne" name="line1">
-          </div>
-          <div class="form-group">
-            <label for="line2">Adress Line 2 </label>
-            <input type="text" class="form-control" ng-model="Address.lineTwo" name="line2">
-          </div>
-          <div class="form-group">
-            <label for="State">State </label>
-            <input type="text" class="form-control" ng-model="Address.state" name="State">
-          </div>
-          <div class="form-group">
-            <label for="City">City</label>
-            <input type="text" class="form-control" ng-model="Address.city" name="City">
-          </div>
-          <div class="form-group">
-            <label for="Zip">Zip Code</label>
-            <input type="number" class="form-control" ng-model="Address.zip" name="Zip">
-          </div>
-       </form>
-     </div>
+
+           <!-- skill div -->
+           <div role="tabpanel" class="tab-pane" id="skills">
+             <hr>
+             <h3>Skills</h3>
+             <hr>
+             <form id="skills" class="form-group">
+               <div class="input-group">
+                 <input type="text" class="form-control" ng-model="skill" placeholder="Enter Skill...">
+                 <span class="input-group-btn">
+                   <button class="btn btn-default" type="button">Go!</button>
+                 </span>
+               </div><!-- /input-group -->
+
+             </form>
+           </div>
+
+       </div>
+      </div>
+       </div>
+
      <!-- resume preview -->
      <div id="resume-preview"class="col-md-8">
+       <h4 class="text-right">Preview</h1>
        <input type="text" class="form-control" ng-show="resume._id" ng-model="resume._id" name="id">
       <h1 class="text-center">{{resume.Name}}</h1>
       <h6 class="text-center">
         <p ng-show="Address.lineOne">Address: {{Address.lineOne}} {{Address.lineTwo}} {{Address.city}}, {{Address.state}} {{Address.zip}}</p>
       </h6>
       <h6 ng-show="resume.Phone" class="text-center">Cell: {{resume.Phone}} Email: {{resume.Email}}</h6>
-      <hr>
-      <button type="button" class="btn btn-default" ng-click="save()">Save</button>
+      <hr ng-show="resume.Phone">
+      <button ng-show="resume.Name" type="button" class="btn btn-default" ng-click="save()">Save</button>
 
 
       <!-- todo -->
