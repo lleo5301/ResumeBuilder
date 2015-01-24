@@ -19,6 +19,7 @@
     "angular": "^1.4.0-beta.1",
     "body-parser": "^1.10.2",
     "express": "^4.11.1",
-    "mongoose": "^3.8.21"
+    "mongoose": "^3.8.21",
+    "phantomjs-pdf": "^0.1.2"
   }
 }
