@@ -27,6 +27,7 @@ angular.module('resumify')
     }
   };
 
+
   $scope.save=function(){
       //add address to resume
       $scope.resume.Address = $scope.Address;
@@ -42,6 +43,19 @@ angular.module('resumify')
       });
   };
 
+  //pdf
+  $scope.pdf=function(){
+    var html={data:$scope.resumeHtml[0].innerHTML};
+    console.log(html)
 
+    $http.post('/api/topdf', html)
+    .success(function(data){
+      console.log(data);
+
+    })
+    .error(function(data){
+      console.log("Error: " + data);
+    });
+  };
 
 }])
