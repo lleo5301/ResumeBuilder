@@ -4,6 +4,7 @@
 var express = require('express');
 var app     = express();
 var bodyParser = require('body-parser');
+var pdf = require('phantomjs-pdf');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/rb');
 
@@ -54,7 +55,7 @@ router.route('/api/resumes')
               res.send(err);
 
           res.json(resume);
-          
+
       });
     })
 
@@ -68,12 +69,33 @@ router.route('/api/resumes')
         });
     });
 
+///pdf-functions begin======== using routes
+router.route('/api/topdf')
+.post(function(req,res){
+  var tempName= Math.floor((Math.random() * 1000) + 1).toString();
+  var fileName="pdfs//"+tempName+".pdf";
+  console.log(req.body);
+  var options={
+    html:req.body.data,
+    css:'libs/bootstrap/css/bootstrap.css',
+    js:'lisb/bootstrap/js/bootstrap.js'
+  };
+
+  pdf.convert(options, function(result){
+  result.toFile(fileName);
+
+  });
+  console.log(req.body);
+  //res.sendfile(fileName);
+  });
+
 
 ///register routes
 app.use('/', router);
 app.use('/libs', express.static(__dirname + '/libs'));
 app.use('/app', express.static(__dirname + '/app'));
 app.use('/views', express.static(__dirname + '/views'));
+
 
 //lets start the server
 //=========================================================
