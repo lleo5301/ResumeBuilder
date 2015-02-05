@@ -22,8 +22,9 @@ angular.module('resumify')
 
   $scope.addSkill=function(){
     if(event.keyCode == 13 && $scope.skill){
-      $scope.resume.Skills.push($scope.skill);
+      $scope.skills.push($scope.skill);
       $scope.skill = "";
+      $scope.resume.Skills=$scope.skills;
     }
   };
 
