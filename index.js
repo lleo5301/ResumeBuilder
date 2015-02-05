@@ -89,6 +89,14 @@ router.route('/api/topdf')
   //res.sendfile(fileName);
   });
 
+//route to retrieve pdf
+routers.route('/api/getpdf/:resume_id')
+.get(function(req,res){
+  console.log(req.params.resume_id);
+});
+
+
+
 
 ///register routes
 app.use('/', router);
