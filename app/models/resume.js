@@ -21,6 +21,13 @@ var Experience = new Schema({
 
 });
 
+var Education = new Schema({
+    Degree:String,
+    Name:String,
+    location:String,
+    Year:String
+});
+
 var ResumeSchema = new Schema({
     Name: String,
     Title: String,
@@ -33,7 +40,8 @@ var ResumeSchema = new Schema({
       zip: Number},
     Summary:String,
     Skills: [String],
-    Experience:[Experience]
+    Experience:[Experience],
+    Education:[Education]
 
 });
 
